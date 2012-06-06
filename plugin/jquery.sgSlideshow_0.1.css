@@ -1,0 +1,54 @@
+.sgSlideshow-container {
+    position: relative;
+}
+	.sgSlideshow-wrapper {
+		overflow: hidden;
+		position: relative;
+	}
+		.sgSlideshow-itemHolder {
+			padding: 0px;
+			margin: 0px;
+			position: absolute;
+		}
+			.sgSlideshow-item {
+				list-style: none;
+				margin: 0px;
+				position: relative;
+			}
+			.sgSlideshow-item.staticly {
+				left: 0;
+				position: absolute;
+				top: 0;
+			}
+			.sgSlideshow-item.statick {
+				clear: both;
+				left: 0;
+				position: absolute;
+				top: 0;
+			}
+			.sgSlideshow-item.scroll {
+				float: left;
+				margin: 0 !important;
+				padding: 0 !important;
+				position: relative;
+			}
+	.sgSlideshow-thumbContiner {
+		position: absolute;
+		z-index: 77;
+	}
+		.sgSlideshow-thumbContiner.right {
+			top: 0px;
+		}
+		.sgSlideshow-thumbContiner.left {
+			top: 0px;
+		}
+		.sgSlideshow-thumbContiner.top {
+			left: 0px;
+		}
+		.sgSlideshow-thumbContiner.bottom {
+			left: 0px;
+		}
+		.sgSlideshow-thumbContiner.top .sgSlideshow-thumbItem,
+		.sgSlideshow-thumbContiner.bottom .sgSlideshow-thumbItem {
+			float: left;
+		}
