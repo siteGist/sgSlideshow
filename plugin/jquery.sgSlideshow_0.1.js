@@ -355,7 +355,7 @@ function ImportJavaScript(sourceUrl) { // функція імпорування 
 					{ // Анімація
 					/**//* Тут ми задіюємо зміну слайдів *//**/
 						params.num = (params.num < 0)?quantity:(params.num > quantity)?0:params.num;
-
+//console.log( params.num );
 						if(params.num != current) // якщо слайд і так вже показується, навіщо це все?, нехай затримка й інші дії будуть виконані....
 						switch (o.mode) {
 							case 'scroll':
@@ -581,7 +581,14 @@ function ImportJavaScript(sourceUrl) { // функція імпорування 
 						jump: false
 					},p);
 					o.autoNext = bool;
-					if(o.autoNext) $this._slideshowGo();
+					if(o.autoNext) {
+						if(p.toFirst) current = o.firstSlide+1;
+						$this._slideshowGo();
+					} else {
+						if(interval) clearInterval(interval);
+						firstStep = true;
+						repeatStopSlide = 0;
+					}
 					if(p.toFirst) $this._showSlide({
 						num: o.firstSlide,
 						action: 'disableAuto-Next',
